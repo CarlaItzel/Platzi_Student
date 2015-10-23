@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ciclos</title>
+	<script type="text/javascript">
+
+var c, t, b; //Las variables que se declara dentroo de llaves solo existe dentro de las llaves
+
+	function calcular()
+	{
+// 9.- Mandar a un alert el valor de la caja
+		// alert(t.value); //Alert con el contenido de la caja de texto//Value es el valor que 
+
+// 10.- Si no se convierte a numero, el 1 se convierte en texto y solo estas concatenando
+		// var numero = t.value;  //Te fuerza a que el valor sea numerico
+		// alert(numero +1);
+
+		var numero = Number(t.value);  //Te fuerza a que el valor sea numerico
+// 11.- Ya se convirtio a numero y realiza la operación
+		//alert(numero + 1);
+
+// 12.- Factorial con while
+		// var calculo = 1;
+		// var n = 1;
+		// while(n <= numero)
+		// {
+		// 	calculo = calculo * n;
+		// 	n++;
+		// }
+		// c.innerHTML = calculo;
+
+// 13.- Factorial for
+		var calculo = 1;
+		var n = 1;
+		for ( n = 1; n <= numero; n++) {
+			calculo = calculo * n;
+		}
+		c.innerHTML = calculo;
+}
+
+	
+	function inicio()
+	{
+		c = document.getElementById("caja");          //Me permite agarrar un id y agarrar toda la linea de id y meterlo en la variable, dentro de las comillas debe ir el nombre del elemento que voy a capturar
+
+// 1.- Cambiar el contenido de una caja id
+		//c.innerHTML = "<strong>Hola <br /><em>Papá !!</em></strong>" //Una forma de cambiar el contenido interno, inner es un atributo de c que declare como mi variable... Es como una forma de cambial algo que ya estaba establecido
+
+// 2.- Concatenar en caja id
+		//c.innerHTML += "<strong>Hola <br /><em>Papá !!</em></strong>";  //Le concatena el nuevo texto al contenido que ya tenia la caja
+
+// 4.- Funcion while
+		// var gritos =10;
+		// while(gritos > 0)   //En el instante que se deje de cumplir deja de funcionar
+		// {                  //Cada vez que un ciclo ocurre se llama iteración
+		// 	c.innerHTML += "h";   //Variable iteradora es la variable que hace un ciclo
+		// 	gritos--;  //Segunda forma de hacer descender el varlor de una variable
+		// }
+		//c.innerHTML += " !!";
+
+// 3.- Primera forma de hacer descender el valor de una variable
+			//gritos= gritos - 1;
+
+// 5.- Forma de sacar el residuo
+		// var numero = 1;
+		// var residuo;
+		// residuo = (numero/2);
+		// c.innerHTML = residuo;
+		// 4.- c.innerHTML += " !!";
+
+// 6.- Forma de saber si es un numero par e impar
+		// var numero = 1;
+		// var residuo;
+		// residuo = numero %2;
+		// c.innerHTML = residuo;
+
+// 7.- Ciclo while de numeros pares del 1-50
+		// var numeros = 1;
+		// var residuo;
+		// while(numeros <= 50)
+		// {
+		// 	residuo = numeros % 2;
+		// 	if (residuo == 0) 
+		// 		{
+		// 			c.innerHTML += " " + numeros;
+		// 		}
+		// 	numeros ++; 
+		// }
+
+// 8.- Ciclo while donde aparece una caja de texto y conteo 1-50 pares
+		// var t = document.getElementById("inserta");
+		// var numeros = 1;
+		// var residuo;
+		// while(numeros <= 50)
+		// {
+		// 	residuo = numeros % 2;
+		// 	if (residuo == 0) 
+		// 		{
+		// 			c.innerHTML += " " + numeros;
+		// 		}
+		// 	numeros ++; 
+		// }
+
+		 t = document.getElementById("inserta");
+		 b = document.getElementById("boton");
+		//Las variables solo viven donde se declaran, c, t, b solo viven en la funcion inicio
+
+		//Se puede declarar por fuera y asignarles el valor por dentro
+
+		b.addEventListener("click", calcular)  //Para la b que es el boton añadele un escuchador cuando el evento se dispare
+		//Cuando no le coloco parentesis a una funcion se usa solo como si fuera una variable
+		//En el momento que alla una funcion llamada click, dispara la funcion calcular
+	}
+	</script>
+
+
+</head>
+<body>
+	<input type="text" id="inserta"/>
+	<input type="button" id="boton" value="Click" />
+	<div id="caja">A</div>  <!-- El id Funciona como caja -->
+	<div> Otra caja</div>  <!-- Si hacemos dos, la segunda se pone debajo de la primera caja -->
+	<script type="text/javascript">
+	inicio();
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document Write</title>
+	<script type="text/javascript">
+	//DOCUMENT.WRITE es una forma menos intrusiva que el alert
+	// 1.- document.write
+	// document.write("Hey !!"); //Aunque sean varios los concatena sin espacios
+	// document.write("Ho !!");
+
+	//2.- document.writeln
+	// document.writeln("Hey <br />"); //Los concatena pero al ser diferentes crea un espacio entre ellas
+	// document.writeln("Ho!!");
+	// // Para generar un salto de línea yo necesitaria usar hatml 
+
+	// 3.- Secuencia HTML
+	// document.write("Mensaje"); //HTML funciona de manera secuencial por eso este mensaje aparece primero
+
+	//4.- 
+	var edad=22;
+	//document.write("Tu edad es " + edad);
+	document.write("Tu edad es " + (edad*3)); //Soporta etiquetas HTML 
+	</script>
+
+
+</head>
+<body>
+	<p> Hola Niños </p>
+</body>
+</html>
